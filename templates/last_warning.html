@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>последний шанс</title>
+</head>
+<body  style="background-color:orange">
+<div>
+        <div style="margin-top: 10%; font-size: 25px" align="center">
+        <h1>Допустим</h1>
+        <h3>Но тебе надо научится для начала писать стили в одном отдельном файле,
+            хранить информацию в базе данных, использовать медиафайлы.
+        И, конечно же, выучить PHP</h3>
+    </div>
+    <div>
+        <div align="left" style="margin-left:10%; display: inline-block">
+            <form name="true" action="{% url 'happy_end' %}">
+                <button type="submit" name="TRUE" style="margin-left:5%; margin-right:5%;height:150px;width:250px">
+                <h1>Я согласен</h1> </button>
+            </form>
+        </div >
+        <div align="right" style="margin-left:40%; display: inline-block">
+            <form name="false" action="{% url 'end_game' %}">
+                <button type="submit" name="FALSE" style="margin-left:5%; margin-right:5%; height:150px;width:250px">
+                    <h1>НЕЕЕЕЕТ! Только не РНР!</h1> </button>
+            </form>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

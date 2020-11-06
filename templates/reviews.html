@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{%block title%} Отзывы{% endblock %}
+
+{% block content %}
+
+{% if user_not_exist %}
+    <p style="color: red">Сначала войдите в свой аккаунт!</p>
+{% endif %}
+<form action="{% url 'reverse' %}" align = "center">
+    <H1> Ваш никчёмный отзыв</H1>
+    <textarea class="form-control" name="message" rows="5" placeholder="ваш отзыв о нашей прекрасной игре">
+    </textarea><br><br>
+    <input class="btn btn-secondary" type="submit">
+</form>
+<p style="margin-left:5%">Отзывы</p>
+<div >
+    {% for  key, value in all_review.items %}
+    <div class="card", style = "margin-left: 5%; margin-right: 30%; margin-top: 2%">
+        <div>
+            <p  class="card-title">{{ key }}</p>
+        </div>
+        <div class = "card-body">
+            <p class="card-text"> {{ value }} </p>
+        </div>
+    </div><br>
+    {% endfor %}
+</div>
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %} Вход в мир костылей и багов  {% endblock%}
+{% block content%}
+
+    <div align="center">
+    {% if user_alredy_exists == True%}
+        <p style="color : red">Ваш логин или пароль неверен</p>
+    {% endif %}
+        <form name="login_form" action="{% url 'login_check' %}">
+            <label>введите логин</label><br>
+            <input type="text" name="name_user_login" placeholder="login" align="center" required><br>
+            <label>введите пароль</label><br>
+            <input  type="password" name="password_user_login" placeholder="password" align="center" required><br><br>
+            <input  class="btn btn-secondary" type="submit" name="Вход" value="Вход" align = "center">
+        </form>
+        <form name="go_back_to_registration" action="/">
+            <p> Ещё нет аккаунта в лучшем MMO Triple-A проекте?
+                <input class="btn btn-secondary" type="submit" name="регистрация!" value="Регистрация" align = "center">
+            </p>
+        </form>
+    </div>
+{% endblock %}

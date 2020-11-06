@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ДВА</title>
+</head>
+<body  style="background-color:red">
+<div>
+    <div style="margin-top: 10%;font-size: 25px" align="center">
+        <h1>ТЫ ЧЕГО НАДЕЛАЛ???</h1>
+    </div>
+    <div>
+        <div align="left" style="margin-left:10%; display: inline-block">
+            <form name="true" action="{% url 'last_warning' %}">
+                <button type="submit" name="TRUE" style="margin-left:5%; margin-right:5%;height:150px;width:250px">
+                TRUE </button>
+            </form>
+        </div >
+        <div align="right" style="margin-left:40%; display: inline-block">
+            <form name="false" action="{% url 'end_game' %}">
+                <button type="submit" name="FALSE" style="margin-left:5%; margin-right:5%; height:150px;width:250px">FALSE </button>
+            </form>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>

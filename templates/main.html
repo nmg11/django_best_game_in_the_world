@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{%block title%} Home page{% endblock %}
+
+{% block content %}
+
+<div align="center" background="images/1.jpg">
+
+    <div class="row">
+        <div class="col-md-2" style="padding-top:5%">
+            <p class="text-warning">Не воспринимайте всё всерьёз!</p>
+        </div>
+        <div class="col-md-8">
+            <p align="center"> Привет! Это главная страница</p><br>
+            {% if user_alredy_exists == True%}
+                <p style="color: red">Такой пользователь уже существует</p>
+            {% endif %}
+            <form name="registration_form" action="{% url 'registration_check' %}" align = "center">
+                <label>введите логин</label><br>
+                <input type="text" name="name_user_registration" placeholder="login" align="center" required><br>
+                <label>введите пароль</label><br>
+                <input type="password"  name="password_user_registration" placeholder="password" align="center" required><br><br>
+                <input  class="btn btn-secondary" type="submit" name="регистрация!" value="Регистрация" align = "center">
+            </form><br>
+            <form name = login action="{% url 'login'%}">
+                <p>уже есть аккаунт?
+                    <input class="btn btn-secondary" type="submit" name="войти"  value="Войти" align = "center">
+                </p>
+            </form>
+        </div>
+        <div class="col-md-2" style="padding-top:25%">
+            <p class="text-warning">Не воспринимайте всё всерьёз!</p>
+        </div>
+    </div>
+
+
+
+</div>
+{% endblock %}

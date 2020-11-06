@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block title %} миссия невыполнима{% endblock %}
+
+{% block content %}
+    <form align = "justify" style="padding-left: 10%; padding-top:5%">
+        <p>
+            {% if text != '' %}
+                {{text}}
+            {% endif %}
+        </p>
+        <br>
+        <button class="btn btn-secondary" type="submit">Отправиться искать счастье</button>
+
+    </form>
+{% endblock%}

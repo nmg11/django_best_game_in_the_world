@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+ {%block title%} начало игры {% endblock %}
+ {% block content %}
+    <div>
+        <div align="justify" style="padding-left:10%; padding-right:20%; padding-top:5%">
+            <form action="{% url 'first_quest' %}">
+            <p>короче, стажёр, я тебя принял и в благородство играть не буду:
+            выполнишь для меня пару сотен проектов и мы в расчете.
+            Заодно посмотрим, как быстро у тебя башка после универа прояснится.
+            А по твоей теме постараюсь разузнать. Хрен знает, на кой ляд тебя сдался карьерный рост.
+            Но я в чужие дела не лезу, хочешь кодить, значит есть за что
+            </p>
+                <button class="btn btn-secondary" type="submit">Отправиться кодить</button>
+            </form>
+        </div>
+    </div>
+{% endblock %}

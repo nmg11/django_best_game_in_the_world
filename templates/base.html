@@ -1,0 +1,48 @@
+{% load static %}
+
+<!--<!DOCTYPE html>-->
+<html lang="en" style="height: 100%">
+<head>
+    <meta charset="UTF-8">
+    <title>{%block title%}  {% endblock %}</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" rel="stylesheet"/>
+    <!--<link rel="stylesheet" type="text/css"href=" {% static 'css/style.css' %}">-->
+</head>
+<body  align = "center" style="background-color: lavender; margin-left:10%; margin-right:10%; height: 100%; display: flex; flex-direction: column">
+<nav class="navbar navbar-expand-lg navbar-light bg-light border" >
+<a class="navbar-brand" href="/">Главная  </a>
+<a class="navbar-brand" href="/reviews">Отзывы</a>
+    {% if user_name %}
+    <a class="navbar-brand" href="/profile_user">{{user_name}}</a>
+    <a class="navbar-brand" href="/start_game">Играть </a>
+    <a class="navbar-brand" href="/quit_profile">Выйти из профиля</a>
+    {% endif %}
+    <br>
+<br>
+</nav>
+<div class="navbar-expand-lg navbar-light bg-light border" style=" padding:1%; flex: 1 0 auto; margin-top:2%">
+    {% block content %}
+
+    {%endblock %}
+</div>
+
+
+<footer style=" flex-shrink: 0;">
+    <div class="navbar-light bg-light border " style="margin-top: 2%;">
+        <div align="center" style="margin-left:20%; margin-right: 20%" >
+            <p align="center">Все права защищены мной</p>
+            <p> OAO The_Best_Corporation_In_The_World_To_Program_Django_At_The_Night</p>
+            <p> Мои контакты
+                <a href="https://t.me/nmg11"><i class="fab fa-telegram"></i></a>
+                <a href="https://vk.com/nmg11"><i class="fab fa-vk"></i></a>
+            </p>
+
+            </div>
+
+    </div>
+</footer>
+
+</body>
+</html>
