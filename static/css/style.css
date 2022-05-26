@@ -3,3 +3,8 @@
     backgroung-color : lighrblue;
     color: red;
 }
+.h1 {
+  color: blue;
+  background-color: yellow;
+  border: 1px solid black;
+}

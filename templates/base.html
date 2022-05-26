@@ -5,10 +5,11 @@
 <head>
     <meta charset="UTF-8">
     <title>{%block title%}  {% endblock %}</title>
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
           integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" rel="stylesheet"/>
-    <!--<link rel="stylesheet" type="text/css"href=" {% static 'css/style.css' %}">-->
+    <link rel="stylesheet" type="text/css"href=" {% static 'css/style.css' %}">
 </head>
 <body  align = "center" style="background-color: lavender; margin-left:10%; margin-right:10%; height: 100%; display: flex; flex-direction: column">
 <nav class="navbar navbar-expand-lg navbar-light bg-light border" >
@@ -23,6 +24,7 @@
 <br>
 </nav>
 <div class="navbar-expand-lg navbar-light bg-light border" style=" padding:1%; flex: 1 0 auto; margin-top:2%">
+     <img class="w-50 mx-auto d-block" src="{% static 'media/images/1.png' %}" alt="photo">
     {% block content %}
 
     {%endblock %}
